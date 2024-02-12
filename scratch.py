@@ -22,5 +22,6 @@ for i in range(1, len(students)):
         j -= 1
     students[j + 1] = k
 
+
 for i in range(3):
     print(f"{i+1} место: {students[i].fio}")
