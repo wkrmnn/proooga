@@ -6,7 +6,7 @@ class Studentik():
 
 students = []
 f = open('students.csv')
-for i in range(10):
+for i in range(501):
     students.append(Studentik())
     s = f.readline().split(',')
     students[i].fio = s[1]
@@ -17,11 +17,16 @@ for i in range(10):
 for i in range(1, len(students)):
     k = students[i]
     j = i - 1
-    while j >= 0 and students[j].score < k.score:
+    while j >= 0 and students[j].score > k.score:
         students[j + 1] = students[j]
         j -= 1
     students[j + 1] = k
 
-
-for i in range(3):
-    print(f"{i+1} место: {students[i].fio}")
+ten = ['10']
+count = 0
+for i in range(len(students)):
+    if students[i].clas in ten:
+        count +=1
+        print(print(f"{i+1} место: {students[i].fio}"))
+    if count == 3:
+        break
