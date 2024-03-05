@@ -4,10 +4,9 @@ class Studentik():
 j = 0
 students = []
 f = open('students.csv')
-name = f.readline().strip()
-for i in f:
+s= f.readline().strip()
+for i in range(501):
     students.append(Studentik())
-    s = i.strip().split(',')
     students[i].fio = s[1]
     students[i].id = s[0]
     students[j].title = s[2]
@@ -25,7 +24,7 @@ for i in students:
                 s+= int(j.score)
         i.score = f'{s/k:.3f}'
 fil = open('students_new.csv', 'w')
-print(name, file=fil)
+print(s,file=fil)
 for i in students:
     print(i.id,',',i.fio,',',i.title,',', i.clas,',', i.score,',',file = fil)
 
