@@ -6,12 +6,11 @@ class Studentik():
 
 students = []
 f = open('students.csv')
-for i in f:
+for i in range(501):
     students.append(Studentik())
     s = f.readline().split(',')
     students[i].fio = s[1]
     students[i].id = s[0]
-    students[j].title = s[2]
     students[i].score = s[4]
     students[i].clas = s[3]
 
@@ -32,6 +31,7 @@ for student in students:
     if count == 3:
         break
 print('10 класс')
-print('1 место:', winners[0].fio)
-print('2 место:', winners[1].fio)
-print('3 место:', winners[2].fio)
+for i in range(len(winners)):
+    print('1 место:', winners[0].fio)
+    print('2 место:', winners[1].fio)
+    print('3 место:', winners[2].fio)

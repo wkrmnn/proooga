@@ -5,14 +5,14 @@ class Studentik():
     id = 0
 
 
+
 students = []
 f = open('students.csv')
-for i in f:
+for i in range(501):
     students.append(Studentik())
     s = f.readline().split(',')
     students[i].fio = s[1]
     students[i].id = s[0]
-    students[j].title = s[2]
     students[i].score = s[4]
     students[i].clas = s[3]
 
