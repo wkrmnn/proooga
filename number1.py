@@ -1,6 +1,9 @@
 class Studentik():
-    pass
-
+    fio = ''
+    score = 0
+    clas = ''
+    id = 0
+    title = ''
 j = 0
 students = []
 f = open('students.csv')
