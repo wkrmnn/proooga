@@ -1,9 +1,5 @@
 class Studentik():
-    fio = ''
-    score = 0
-    clas = ''
-    id = 0
-    title = ''
+    pass
 
 j = 0
 students = []
@@ -29,7 +25,7 @@ for i in students:
                 s+= int(j.score)
         i.score = f'{s/k:.3f}'
 fil = open('students_new.csv', 'w')
-print(s, file = fil)
+print(name, file=fil)
 for i in students:
     print(i.id,',',i.fio,',',i.title,',', i.clas,',', i.score,',',file = fil)
 
