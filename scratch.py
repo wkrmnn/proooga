@@ -22,11 +22,15 @@ for i in range(1, len(students)):
         j -= 1
     students[j + 1] = k
 
-ten = ['10']
+winners = []
 count = 0
-for i in range(len(students)):
-    if students[i].clas in ten:
+for student in students:
+    if student.clas == '10':
+        winners.append(student)
         count +=1
-        print(print(f"{i+1} место: {students[i].fio}"))
     if count == 3:
         break
+print('10 класс')
+print('1 место:', winners[0].fio)
+print('2 место:', winners[1].fio)
+print('3 место:', winners[2].fio)
